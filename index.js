@@ -5,15 +5,15 @@ function returnReadme(responses) {
   const { name, install, usage, licence, contribute, test, question1, question2 } = responses
   return `
 # ${name}
+![${licence}](https://img.shields.io/badge/licence-${licence}-Green)
 
-
-##Table of Contents
-  1:Installation
-  2:Usage
-  3:Licence
-  4:Contributing
-  5:Tests
-  6:Questions
+##Table of Contents\n
+  1:Installation\n
+  2:Usage\n
+  3:Licence\n
+  4:Contributing\n
+  5:Tests\n
+  6:Questions\n
 
 ## 1:Installation
 ${install}
@@ -29,16 +29,15 @@ would like to contact me see the questions section of the readme
 ${test}
 
 ## 5:Questions
-If you have futher questions or would like to contribute, please contact me at one of the following
-GitHub:
-https://github.com/${question1}
-Email:
-${question2}
+If you have futher questions or would like to contribute, please contact me at one of the following\n
+GitHub:\n
+https://github.com/${question1} \n
+Email:\n
+${question2} \n
 
 
 ## 6:Licence
-
-![${licence}](https://img.shields.io/badge/licence-${licence}-Green)
+${licence}
 
 
   `
