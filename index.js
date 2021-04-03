@@ -2,9 +2,9 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 function returnReadme(responses) {
-  const { name, install, usage, Licence, contribute, test, question1, question2 } = responses
+  const { name, install, usage, licence, contribute, test, question1, question2 } = responses
   return `
-## ${name}
+# ${name}
 
 
 ##Table of Contents
@@ -37,7 +37,8 @@ ${question2}
 
 
 ## 6:Licence
-${Licence}
+
+![${licence}](https://img.shields.io/badge/licence-${licence}-Green)
 
 
   `
@@ -65,10 +66,10 @@ inquirer
       type: 'list',
       message: 'What licence are you granting this project?',
       name: 'licence',
-      choices: ['MIT', 'AGPL-3.0-or-later', 'GPL-3.0-or-later', 'LGPL-3.0-or-later', 'MPL-2.0', 'Apache-2.0', 'BSL-1.0', 'Unlicense'],
+      choices: ['MIT', 'AGPL_3.0', 'GPL_3.0', 'LGPL_3.0', 'MPL_2.0', 'Apache_2.0', 'BSL_1.0', 'Unlicense'],
     },
     {
-      type: 'checkbox',
+      type: 'rawlist',
       message: 'Are you allowing contributions?',
       name: 'contribute',
       choices: ['I am', 'I am not', 'I am not (with exceptions)'],
